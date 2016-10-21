@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Project Charm</title>
+		<link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+		<link href="../public/css/style.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway" rel="stylesheet">
+	</head>
+	<body ng-app="AcquisitionApp">
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<div class="navbar-brand">
+						Project Charm
+					</div>
+					<form class="navbar-form navbar-left">
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="Add Filters">
+							<input type="submit">
+						</div>
+					</form>
+					<div class="nav navbar-nav navbar-right">
+						<button type="button" class="btn btn-default navbar-btn">About</button>
+						<button type="button" class="btn btn-default navbar-btn">Design</button>
+					</div>
+				</div>
+			</div>
+		</nav>
+		<header>
+			<h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus rhoncus nunc ligula.</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus rhoncus nunc ligula, eget vehicula neque pellentesque quis. Donec euismod est vel nulla auctor, nec tempus nulla fringilla.</p>
+		</header>
+		<main ng-Controller="routerApp">
+			<section>
+				<div class="card" ng-repeat="acqui in acquis">
+					<card-info acqui="acqui"> </card-info>
+				</div>
+			</section>
+		</main>
+	<script src="../bower_components/jquery/dist/jquery.min.js"></script>
+		<script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+		<script src="../bower_components/angular/angular.min.js"></script>
+	</body>
+</html>

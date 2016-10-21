@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, width=device-width">
+		<title>AcquiWatch</title>
+		<link href="libs/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/style.css" rel="stylesheet">
+		<link href="css/animate.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Raleway:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+	</head>
+	<body ng-app="acquisitionApp" ng-controller="acquiController">
+	<div class="loading"></div>
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+				<div class="navbar-header"> 
+					<div class="navbar-brand">
+						<h1>AcquiWatch</h1>
+					</div>
+					<form class="navbar-form navbar-left mobile-width">
+						<div class="form-group mobile-out">
+							<button type="button" ng-click="updateOrder('date'); updateActiveButtons(18)" class="btn btn-default navbar-btn" id="date">{{getName('date', 'Date')}}</button>
+							<button type="button" ng-click="updateOrder('value'); updateActiveButtons(19)" class="btn btn-default navbar-btn purple-button" id="value">{{getName('value', 'Valuation')}}</button>
+							<button type="button" ng-click="updateShownButtons('Name'); updateActiveButtons(0)" ng-class="{'active actv1': activeButtonArray[0]}" class="btn btn-default navbar-btn">{{getName('name', 'Company Name')}}</button>
+							<button type="button" ng-click="updateShownButtons('Country'); updateActiveButtons(1)" ng-class="{'active actv2': activeButtonArray[1]}" class="btn btn-default navbar-btn">Country</button>
+							<button type="button" ng-click="updateShownButtons('Field'); updateActiveButtons(2)" ng-class="{'active actv3': activeButtonArray[2]}" class="btn btn-default navbar-btn">Industry</button>
+							<button type="button" ng-click="updateShownButtons('Search'); updateActiveButtons(3)" ng-class="{'active actv4': activeButtonArray[3]}" class="btn btn-default navbar-btn">Search</button>
+							<button type="button" ng-click="resetFilters()" class="btn btn-default navbar-btn btn-danger">Reset</button>
+						</div>
+					</form>
+					<div class="nav navbar-nav navbar-right">
+						<a target="_blank" href="submit_error.html"><button type="button" class="btn btn-default navbar-btn error-btn">Submit an Error</button></a>
+						<a target="_blank" href="http://rubycreative.io"><button type="button" class="btn btn-default navbar-btn">Contact Us</button></a>
+					</div>
+				</div>
+			</div>
+			<div class="container-fluid">
+				<div class="navbar-header mobile-nav"> 
+					<form class="navbar-form navbar-left">
+						<div class="form-group">
+							<button type="button" ng-click="updateOrder('date'); updateActiveButtons(18)" class="btn btn-default navbar-btn" id="date">{{getName('date', 'Date')}}</button>
+							<button type="button" ng-click="updateOrder('value'); updateActiveButtons(19)" class="btn btn-default navbar-btn" id="value">{{getName('value', 'Valuation')}}</button>
+							<button type="button" ng-click="updateShownButtons('Name'); updateActiveButtons(0)" ng-class="{'active actv': activeButtonArray[0]}" class="btn btn-default navbar-btn">{{getName('name', 'Company Name')}}</button>
+							<button type="button" ng-click="updateShownButtons('Country'); updateActiveButtons(1)" ng-class="{'active actv': activeButtonArray[1]}" class="btn btn-default navbar-btn">Country</button>
+							<button type="button" ng-click="updateShownButtons('Field'); updateActiveButtons(2)" ng-class="{'active actv': activeButtonArray[2]}" class="btn btn-default navbar-btn">Industry</button>
+							<button type="button" ng-click="updateShownButtons('Search'); updateActiveButtons(3)" ng-class="{'active actv': activeButtonArray[3]}" class="btn btn-default navbar-btn">Search</button>
+							<button type="button" ng-click="resetFilters()" class="btn btn-default navbar-btn btn-danger">Reset</button>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div ng-show="showNav" class="container-fluid">
+				<div ng-show="showNav" class="secondary"> 
+					<div>
+						<button type="button" ng-show="showButtonArray[0]" ng-click="updateOrder('seller.name'); updateActiveButtons(4)" ng-class="{'active': activeButtonArray[4]}" class="btn btn-default navbar-btn">{{getName('seller.name', 'Seller Name')}}</button>
+						<button type="button" ng-show="showButtonArray[0]" ng-click="updateOrder('buyer.name'); updateActiveButtons(5)" ng-class="{'active': activeButtonArray[5]}" class="btn btn-default navbar-btn">{{getName('buyer.name', 'Buyer Name')}}</button>
+					</div>
+					<div class="scroll">
+						<button type="button" ng-show="showButtonArray[1]" ng-click="updateCountry('USA'); updateActiveButtons(6)" ng-class="{'active': activeButtonArray[6]}" class="btn btn-default navbar-btn">USA</button>
+						<button type="button" ng-show="showButtonArray[1]" ng-click="updateCountry('CHN'); updateActiveButtons(7)" ng-class="{'active': activeButtonArray[7]}" class="btn btn-default navbar-btn">China</button>
+						<button type="button" ng-show="showButtonArray[1]" ng-click="updateCountry('ISR'); updateActiveButtons(8)" ng-class="{'active': activeButtonArray[8]}" class="btn btn-default navbar-btn">Israel</button>
+						<button type="button" ng-show="showButtonArray[1]" ng-click="updateCountry('RUS'); updateActiveButtons(9)" ng-class="{'active': activeButtonArray[9]}" class="btn btn-default navbar-btn">Russia</button>
+						<button type="button" ng-show="showButtonArray[1]" ng-click="updateCountry('IND'); updateActiveButtons(10)" ng-class="{'active': activeButtonArray[10]}" class="btn btn-default navbar-btn">India</button>
+						<button type="button" ng-show="showButtonArray[1]" ng-click="updateCountry('JPN'); updateActiveButtons(11)" ng-class="{'active': activeButtonArray[11]}" class="btn btn-default navbar-btn">Japan</button>
+					</div>
+					<div class="scroll">
+						<button type="button" ng-show="showButtonArray[2]" ng-click="updateField('Technology'); updateActiveButtons(12)" ng-class="{'active': activeButtonArray[12]}" class="btn btn-default navbar-btn">Tech</button>
+						<button type="button" ng-show="showButtonArray[2]" ng-click="updateField('Consumer'); updateActiveButtons(13)" ng-class="{'active': activeButtonArray[13]}" class="btn btn-default navbar-btn">Consumer</button>
+						<button type="button" ng-show="showButtonArray[2]" ng-click="updateField('Pharma'); updateActiveButtons(14)" ng-class="{'active': activeButtonArray[14]}" class="btn btn-default navbar-btn">Pharma</button>
+						<button type="button" ng-show="showButtonArray[2]" ng-click="updateField('Financial'); updateActiveButtons(15)" ng-class="{'active': activeButtonArray[15]}" class="btn btn-default navbar-btn">Financial</button>
+						<button type="button" ng-show="showButtonArray[2]" ng-click="updateField('Biotech'); updateActiveButtons(16)" ng-class="{'active': activeButtonArray[16]}" class="btn btn-default navbar-btn">Biotech</button>
+						<button type="button" ng-show="showButtonArray[2]" ng-click="updateField('Industrial'); updateActiveButtons(17)" ng-class="{'active': activeButtonArray[17]}" class="btn btn-default navbar-btn">Industrial</button>
+						<button type="button" ng-show="showButtonArray[2]" ng-click="updateField('Business'); updateActiveButtons(20)" ng-class="{'active': activeButtonArray[20]}" class="btn btn-default navbar-btn">Business</button>
+					</div>
+
+						<input type="text" ng-show="showButtonArray[3]" ng-model="search.text" class="form-control absolute" placeholder="Search Database">
+				</div>
+			</div>
+		</nav>
+		<main>
+			<section>
+				<main-info class="introduction" acqui="acqui"></main-info>
+				<div ng-repeat-start="acqui in (filteredItems = (acquis | orderBy:order:reverse | fieldFilter: fieldFilter | countryFilter: countryFilter | filter: undisclosedFilter | filter:search.text)) | limitTo: quantity track by $index" class="repeated">
+				    <card-info class="card" acqui="acqui" ng-style="{'background-image':'url(img/company/' + acqui.seller.img + '.jpg)'}"></card-info>
+				</div>
+				<div ng-repeat-end ng-if="$index === adFrequency[0] || $index === adFrequency[1] || $index === adFrequency[2] || $index === adFrequency[3]" class="repeated">
+				    <ad-info class="ad-style"></ad-info>
+				    <div class="ad-spacing"></div>
+				</div>
+			</section>
+			<p>Total: {{filteredItems.length}}</p>
+			<button class="btn btn-default show-more" type="button" ng-if="!(quantity >= filteredItems.length)" ng-click="updateQuantity()" class="">Show More</button>
+		</main>
+		<footer>
+			Credit for descriptions and acquisition data goes to Crunchbase.com, Bloomberg.com, WSJ.com, Techcrunch.com and more.
+		</footer>
+		<script src="libs/jquery/dist/jquery.min.js"></script>
+		<script src="libs/bootstrap/dist/js/bootstrap.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-animate.js"></script>
+		<script src="https://angular-ui.github.io/ui-router/release/angular-ui-router.min.js"></script>
+		<script src="js/app.js"></script>
+		<script src="js/directives/card.js"></script>
+		<script src="js/directives/intro.js"></script>
+		<script src="js/directives/ad.js"></script>
+		<script src="js/controllers/acquiController.js"></script>
+		<script src="js/services/acquiFactory.js"></script>
+		<script src="js/filters.js"></script>
+	</body>
+</html>

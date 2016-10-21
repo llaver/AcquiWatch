@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, width=device-width">
+		<title>Submit an error - AcquiWatch</title>
+		<link href="libs/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/sub_error.css" rel="stylesheet">
+		<link href="css/style.css" rel="stylesheet">
+		<link href="css/animate.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Raleway:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+	</head>
+	<body ng-app="acquisitionApp" ng-controller="acquiController">
+	<div class="loading"></div>
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+				<div class="navbar-header"> 
+					<div class="navbar-brand">
+						<h1>AcquiWatch</h1>
+					</div>
+					<div class="nav navbar-nav navbar-right">
+						<a target="_blank" href="http://rubycreative.io"><button type="button" class="btn btn-default navbar-btn">Contact Us</button></a>
+					</div>
+				</div>
+			</div>
+		</nav>
+		<main>
+			<section ng-app="emailApp" ng-controller="emailController" class="advertise-card">
+				<section>
+					<div>
+						<h1>Report an Error</h1>
+						<p>We work hard to make this site 
+
+						Advertising on AcquiWatch allows you to reach a large business and technology community interested in an array of products. We're looking to compile a great repetoir of products and services that will benefit our users and the greater community.
+						</p>
+					</div>
+					<div class="form-group mobile-out">
+						<input class="selected_button" ng-model="selected_button" value="" type="hidden">
+						<button type="button" ng-click="updateError('database')" ng-class="{'active': database}" class="btn btn-default navbar-btn">Database Error</button>
+						<button type="button" ng-click="updateError('website')" ng-class="{'active': website}" class="btn btn-default navbar-btn">Website Style Error</button>
+						<button type="button" ng-click="updateError('general')" ng-class="{'active': general}" class="btn btn-default navbar-btn">General Error</button>
+						<button type="button" ng-click="updateError('suggestion')" ng-class="{'active': suggestion}" class="btn btn-default navbar-btn">Suggestions</button>
+					</div>
+					<section ng-show="database">
+						<p>A database error is an error where the information about a company shows up incorrectly on the webpage. This information includes: Industry, Country, Description, Date, Links, Valuation, Company Name or some combination. Please fill out the form below so we can fix this error ASAP.
+					</p>
+					<form>
+						<div class="form-group">
+					    	<label for="example-text-input">Company Name</label>
+					    	<input type="text" ng-model="company" class="form-control" placeholder="Company name with the database error" id="example-text-input">
+						</div>
+						<div class="form-group">
+					    	<label for="example-text-input">Type of Error</label>
+					    	<input type="text" ng-model="typeOfError" class="form-control" placeholder="Industry, Country, Description, Date, Links, Valuation, Company Name or Other" id="example-text-input">
+						</div>
+						<div class="form-group">
+							<label for="exampleTextarea">Description of the Error</label>
+					    	<textarea  ng-model="descOfError" class="form-control" id="exampleTextarea" rows="3"></textarea>
+						</div>					  
+						<div class="form-group">
+					    	<label for="exampleInputEmail1">Email address</label>
+					    	<input type="email" ng-model="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+					    	<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+						</div>
+						<div class="form-group">
+					    	<label for="exampleInputFile">File input</label>
+					    	<input type="file" ng-model="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
+					    	<small id="fileHelp" class="form-text text-muted">If you have a screenshot of the error on the main page, please upload it here. This is not required</small>
+						</div>
+					  <button type="submit" class="btn btn-primary submit">Submit</button>
+					</form>
+					</section>
+					<section ng-show="website">
+						<p>A Website error is an error where something went wrong visually with the webiste. This can include any elements that display incorrectly or button functions that do not work as intended.
+						</p>
+					<form>
+						<div class="form-group">
+					    	<label for="example-text-input">Type of Error</label>
+					    	<input type="text" ng-model="typeOfError" class="form-control" placeholder="Visual Glitch, UI Error or Other" id="example-text-input">
+						</div>
+						<div class="form-group">
+							<label for="exampleTextarea">Description of the Error</label>
+					    	<textarea ng-model="descOfError" class="form-control" id="exampleTextarea" rows="3"></textarea>
+						</div>					  
+						<div class="form-group">
+					    	<label for="exampleInputEmail1">Email address</label>
+					    	<input type="email" ng-model="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+					    	<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+						</div>
+						<div class="form-group">
+					    	<label for="exampleInputFile">File input</label>
+					    	<input type="file" ng-model="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
+					    	<small id="fileHelp" class="form-text text-muted">If you have a screenshot of the error on the main page, please upload it here. This is not required</small>
+						</div>
+					  <button type="submit" class="btn btn-primary submit">Submit</button>
+					</form>
+					</section>
+					<section ng-show="general">
+						<p>Any miscellanious error that does not fit the other categories. This information can include anything that caused the site to display or function in a way that was not intended for the user.
+					</p>
+					<form>
+						<div class="form-group">
+					    	<label for="example-text-input">Type of Error</label>
+					    	<input type="text" ng-model="typeOfError" class="form-control" placeholder="" id="example-text-input">
+						</div>
+						<div class="form-group">
+							<label for="exampleTextarea">Description of the Error</label>
+					    	<textarea ng-model="descOfError" class="form-control" id="exampleTextarea" rows="3"></textarea>
+						</div>					  
+						<div class="form-group">
+					    	<label for="exampleInputEmail1">Email address</label>
+					    	<input type="email" ng-model="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+					    	<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+						</div>
+						<div class="form-group">
+					    	<label for="exampleInputFile">File input</label>
+					    	<input type="file" ng-model="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
+					    	<small id="fileHelp" class="form-text text-muted">If you have a screenshot of the error on the main page, please upload it here. This is not required</small>
+						</div>
+					  <button type="submit" class="btn btn-primary submit">Submit</button>
+					</form>
+					</section>
+					<section ng-show="suggestion">
+						<p>If you have any suggestions for future features or improvments to the Acquiwatch website, we'd love if you could tell us here.
+					</p>
+					<form>					  
+						<div class="form-group">
+					    	<label for="exampleInputEmail1">Email address</label>
+					    	<input type="email" ng-model="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+					    	<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+						</div>
+						<div class="form-group">
+							<label for="exampleTextarea">Description of suggestions</label>
+					    	<textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+						</div>
+					  <button type="submit" class="btn btn-primary submit">Submit</button>
+					</form>
+					</section>
+				</section>
+			</section>
+		</main>
+		<script src="libs/jquery/dist/jquery.min.js"></script>
+		<script src="libs/bootstrap/dist/js/bootstrap.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-animate.js"></script>
+		<script src="https://angular-ui.github.io/ui-router/release/angular-ui-router.min.js"></script>
+		<script src="js/app.js"></script>
+		<script src="js/controllers/acquiController.js"></script>
+		<script src="js/controllers/emailController.js"></script>
+		<script src="js/services/acquiFactory.js"></script>
+		<script src="js/filters.js"></script>
+	</body>
+</html>

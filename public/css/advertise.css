@@ -1,0 +1,551 @@
+.shadow {
+  box-shadow: 0px 0px 3px 0px #000000;
+  -moz-box-shadow: 0px 0px 3px 0px #000000;
+  -webkit-box-shadow: 0px 0px 3px 0px #000000;
+}
+.absolute {
+  position: absolute;
+}
+.scroll {
+  white-space: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+.ad-spacing {
+  width: 350px;
+  display: inline-table;
+  margin: 0 0px -5px 24px;
+}
+.actv1 {
+  background-color: #B54C59 !important;
+}
+.actv2 {
+  background-color: #CD6868 !important;
+}
+.actv3 {
+  background-color: #BC5CA3 !important;
+}
+.actv4 {
+  background-color: #C4B55C !important;
+}
+body {
+  background-color: #F6F6F6;
+  overflow-x: none;
+}
+.loading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #F6F6F6;
+  z-index: 9999;
+}
+.navbar {
+  margin-bottom: 0;
+}
+.container-fluid {
+  padding: 0;
+}
+.container-fluid .secondary {
+  height: 69px;
+  background-color: #C9C9C9;
+  padding: 10px 0 10px 40px;
+  -webkit-transition-delay: 40ms;
+  transition-delay: 40ms;
+  animation-delay: 40ms;
+}
+@media (max-width: 767px) {
+  .container-fluid .secondary .scroll {
+    margin-left: -15px;
+  }
+}
+.container-fluid .secondary input {
+  width: 250px;
+  margin-top: 7px;
+}
+.container-fluid .secondary .ng-hide-add {
+  display: none !important;
+}
+.container-fluid .secondary .ng-hide-remove {
+  animation: fadeIn .5s;
+}
+.container-fluid .secondary .ng-hide-add-active {
+  opacity: 1;
+}
+.container-fluid .navbar-header {
+  box-shadow: 0px 0px 3px 0px #000000;
+  -moz-box-shadow: 0px 0px 3px 0px #000000;
+  -webkit-box-shadow: 0px 0px 3px 0px #000000;
+  height: 75px;
+  width: 100%;
+  background-color: #E7E7E7;
+}
+.container-fluid .navbar-header .navbar-brand {
+  color: #525252;
+}
+.container-fluid .navbar-header .navbar-brand h1 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 40px;
+  margin: 0 0 0 40px;
+}
+@media (max-width: 1019px) {
+  .container-fluid .navbar-header .navbar-brand h1 {
+    margin-left: 10px;
+  }
+}
+.container-fluid .navbar-header .navbar-right {
+  margin: 0;
+}
+.container-fluid .navbar-header .navbar-form {
+  padding-top: 3px;
+}
+.container-fluid .navbar-header .navbar-form .form-group {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+}
+.container-fluid .navbar-header .navbar-form .form-group button:first-child {
+  background-color: #50E3C2;
+  color: #FFFFFF;
+}
+.container-fluid .navbar-header .navbar-form .form-group button:nth-child(2) {
+  background-color: #966ACD;
+  color: #FFFFFF;
+}
+.container-fluid .navbar-header .navbar-form .form-group button:nth-child(3) {
+  background-color: #DF5C6C;
+  color: #FFFFFF;
+}
+.container-fluid .navbar-header .navbar-form .form-group button:nth-child(4) {
+  background-color: #DD7373;
+  color: #FFFFFF;
+}
+.container-fluid .navbar-header .navbar-form .form-group button:nth-child(5) {
+  background-color: #E36FC4;
+  color: #FFFFFF;
+}
+.container-fluid .navbar-header .navbar-form .form-group button:nth-child(6) {
+  background-color: #E3D26F;
+  color: #FFFFFF;
+}
+.container-fluid .navbar-header .navbar-nav button {
+  margin: 19px 40px 0 0;
+}
+@media (max-width: 1019px) {
+  .container-fluid .navbar-header .navbar-nav button {
+    margin-right: 10px;
+  }
+}
+.container-fluid .navbar-header .navbar-nav .error-btn {
+  margin-right: 10px;
+}
+.mobile-nav {
+  white-space: nowrap;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+@media (min-width: 1100px) {
+  .mobile-nav {
+    display: none;
+  }
+}
+/*
+	.btn.ng-show-add {
+		transition: all 0.5s linear;
+		opacity: 0;
+	}
+	.btn.ng-show-add.ng-show-add-active {
+	 	opacity: 1;
+	}
+	.btn.ng-show-remove {
+		animation: 0.5s animation;
+	}
+	.secondary.ng-show-add {
+		transition: all 0.5s linear;
+	 	opacity: 0;
+	}
+	.secondary.ng-show-add.ng-show-add-active {
+	 	opacity: 1;
+	}
+	.secondary.ng-show-remove {
+		animation: 0.5s leaveAnimation;
+	}*/
+header {
+  width: 350px;
+  margin-left: 15px;
+}
+header h1 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+}
+header p {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  width: 300px;
+}
+main {
+  width: 100%;
+  text-align: center;
+}
+main section {
+  display: inline-block;
+}
+main .introduction {
+  width: 350px;
+  display: inline-table;
+  margin: 0 10px 10px 10px;
+  text-align: left;
+  transform: translate(0, 16px);
+}
+main .introduction h1 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  font-size: 35px;
+  color: black;
+}
+main .introduction p {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  width: 290px;
+}
+main .introduction .mainad {
+  background-color: black;
+  width: 350px;
+  height: 200px;
+  box-shadow: 0px 0px 3px 0px #000000;
+  -moz-box-shadow: 0px 0px 3px 0px #000000;
+  -webkit-box-shadow: 0px 0px 3px 0px #000000;
+  margin-top: 36px;
+}
+@media (max-width: 744px) {
+  main .introduction .mainad {
+    margin-bottom: 26px;
+  }
+}
+main .introduction .mainad h1 {
+  font-weight: 900;
+  font-size: 50px;
+  color: white;
+  margin: 0 0 0 20px;
+  padding-top: 8px;
+}
+main .introduction .mainad p {
+  margin: 8px 0 0 20px;
+  color: white;
+  font-size: 15px;
+}
+main .introduction .mainad h4 {
+  float: right;
+  color: white;
+  font-weight: 300;
+  margin: 15px 20px 0 0;
+}
+main .introduction .mainad h6 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  font-size: 10px;
+  margin-top: 40px;
+}
+main .introduction .mainad .left {
+  float: left;
+  margin-left: 20px;
+  color: white;
+}
+main .introduction .mainad .right {
+  float: right;
+  margin-right: 20px;
+  color: white;
+}
+main .repeated {
+  display: inline-block;
+  z-index: 9999;
+}
+main .repeated.ng-enter {
+  animation: fadeIn .5s;
+}
+main .repeated.ng-enter-stagger,
+main .repeated.ng-move-stagger {
+  /* 200ms will be applied between each sucessive enter operation */
+  -webkit-transition-delay: 40ms;
+  transition-delay: 40ms;
+  animation-delay: 40ms;
+  /* this is here to avoid accidental CSS inheritance */
+  -webkit-transition-duration: 0;
+  transition-duration: 0;
+}
+main .repeated.ng-move {
+  animation: fadeIn 1s;
+  transition-delay: 0.1s;
+}
+main .card {
+  box-shadow: 0px 0px 3px 0px #000000;
+  -moz-box-shadow: 0px 0px 3px 0px #000000;
+  -webkit-box-shadow: 0px 0px 3px 0px #000000;
+  width: 350px;
+  height: 530px;
+  display: inline-table;
+  background-color: white;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  margin: 0 10px 20px 10px;
+  text-align: left;
+}
+main .card .move {
+  transform: translate(0, 260px);
+}
+main .ad-style {
+  position: relative;
+}
+main .ad-style .ads {
+  position: absolute;
+  box-shadow: 0px 0px 3px 0px #000000;
+  -moz-box-shadow: 0px 0px 3px 0px #000000;
+  -webkit-box-shadow: 0px 0px 3px 0px #000000;
+  width: 350px;
+  height: 530px;
+  display: inline-table;
+  background-color: black;
+  margin: 6px 10px 0 10px;
+}
+@media (max-width: 744px) {
+  main .ad-style .ads {
+    position: static;
+    margin-right: 10px;
+  }
+}
+main .ad-style .ads h1 {
+  text-align: left;
+  font-weight: 900;
+  font-size: 50px;
+  color: white;
+  margin: 0 0 0 20px;
+  padding-top: 8px;
+  font-family: 'Raleway', sans-serif;
+}
+main .ad-style .ads img {
+  margin-top: 50px;
+  width: 300px;
+}
+main .ad-style .ads h2 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  color: white;
+}
+main .ad-style .ads p {
+  color: white;
+  font-size: 15px;
+  text-align: center;
+  margin: 0 30px 0 30px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+}
+main .ad-style .ads h4 {
+  float: right;
+  color: white;
+  font-weight: 300;
+  margin: 15px 20px 0 0;
+}
+main .ad-style .ads h6 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  margin-top: 94px;
+}
+main .ad-style .ads .left {
+  float: left;
+  margin-left: 20px;
+  color: white;
+}
+main .ad-style .ads .right {
+  float: right;
+  margin-right: 20px;
+  color: white;
+}
+main .buyer {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 500;
+  font-size: 10px;
+  color: black;
+  margin: 0 0 0 20px;
+}
+main .seller {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  font-size: 35px;
+  color: black;
+  margin: 0 0 0 20px;
+}
+main .value {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 800;
+  color: #00FF64;
+  margin: 0 0 25px 20px;
+}
+main .undis {
+  color: #FF2100;
+}
+main .date-vert {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 500;
+  color: #606060;
+  transform: rotate(90deg);
+  text-align: right;
+  position: absolute;
+  right: -35px;
+  top: 30px;
+}
+main .date-vert span {
+  color: black;
+}
+main .desc {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  font-size: 12px;
+  width: 200px;
+  margin: 0 0 20px 20px;
+}
+main .company {
+  width: 100%;
+}
+main .info {
+  margin: 0 0 0 20px;
+  font-size: 11px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  color: black;
+}
+main .flag {
+  box-shadow: 0px 0px 3px 0px #000000;
+  -moz-box-shadow: 0px 0px 3px 0px #000000;
+  -webkit-box-shadow: 0px 0px 3px 0px #000000;
+  position: absolute;
+  width: 100px;
+  right: 0;
+  margin: 78px 18px 18px 0;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+main .field {
+  box-shadow: 0px 0px 3px 0px #000000;
+  -moz-box-shadow: 0px 0px 3px 0px #000000;
+  -webkit-box-shadow: 0px 0px 3px 0px #000000;
+  width: 50px;
+  float: right;
+  margin: 20px 20px 0 0;
+  position: relative;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+.show-more {
+  margin-bottom: 10px;
+}
+footer {
+  text-align: center;
+  padding: 10px 0 20px 0;
+  font-family: 'Open Sans', sans-serif;
+  color: gray;
+}
+@media (max-width: 1100px) {
+  .mobile-out:first-child {
+    display: none;
+  }
+  .secondary > div,
+  .secondary input {
+    margin-left: -30px;
+  }
+  .mobile-width {
+    display: none;
+  }
+  .navbar-header {
+    margin-left: 0 !important;
+  }
+  .form-group {
+    margin-left: -5px;
+  }
+}
+@media (max-width: 767px) {
+  .form-group {
+    margin-left: 25px;
+  }
+  .secondary > div,
+  .secondary input {
+    margin-left: -16px;
+  }
+}
+@media (max-width: 320px) {
+  .container-fluid .navbar-header {
+    width: 118% !important;
+  }
+  .container-fluid .secondary {
+    width: 118% !important;
+  }
+  main .introduction h1 {
+    font-size: 28px;
+    text-align: center;
+  }
+  main .introduction p {
+    text-align: center;
+    font-weight: 400;
+    margin: 0 auto;
+  }
+  main .introduction .mainad p,
+  main .introduction .mainad h1 {
+    text-align: left;
+  }
+}
+.shadow {
+  box-shadow: 0px 0px 3px 0px #000000;
+  -moz-box-shadow: 0px 0px 3px 0px #000000;
+  -webkit-box-shadow: 0px 0px 3px 0px #000000;
+}
+a {
+  text-decoration: none;
+  color: #525252;
+}
+a:hover {
+  text-decoration: none;
+  color: #2B2B2B;
+}
+.advertise-card {
+  box-shadow: 0px 0px 3px 0px #000000;
+  -moz-box-shadow: 0px 0px 3px 0px #000000;
+  -webkit-box-shadow: 0px 0px 3px 0px #000000;
+  width: 700px;
+  height: 530px;
+  display: inline-table;
+  background-color: white;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  margin: 20px 10px 20px 10px;
+  text-align: left;
+}
+.advertise-card section {
+  margin: 0 0 0 20px;
+}
+.advertise-card section h1 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 800;
+}
+.advertise-card section p,
+.advertise-card section li {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 500;
+  width: 700px;
+}
+.advertise-card section h2 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+}
+.advertise-card section h3 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+}
+.advertise-card section table {
+  width: 500px;
+}

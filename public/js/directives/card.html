@@ -1,0 +1,14 @@
+<div>
+	<div>
+		<img class="field" ng-src="img/field/{{acqui.seller.field}}.png">
+	</div>
+	<div class="move">
+		<h3 class="date-vert">{{acqui.date | date: 'MM'}}<span>{{acqui.date | date: '.dd.'}}</span>{{acqui.date | date: 'yyyy'}}</h3>
+		<h6 class="buyer">Acquired By: <strong>{{acqui.buyer.name}}</strong></h6>
+		<h2 class="seller" ng-style="setSize(acqui.seller.name.length)">{{acqui.seller.name}}</h2>
+		<h1 class="value" ng-style="{ color: acqui.value=='undisclosed'? '#FF2100':'', fontSize: setValueSize(acqui.value) }">{{acqui.value | shortNumber}}</h1>
+		<img class="flag" ng-src="img/country/{{acqui.seller.country}}.png">
+		<p class="desc">{{acqui.seller.desc | description}}</p>
+		<u><a class="info" href="{{acqui.info}}">More Info</a></u>
+	</div>
+</div> 

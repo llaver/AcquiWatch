@@ -1,0 +1,508 @@
+@Raleway: 'Raleway', sans-serif;
+@Open-Sans: 'Open Sans', sans-serif;
+.shadow {
+	box-shadow: 0px 0px 3px 0px rgba(0,0,0,1);
+	-moz-box-shadow: 0px 0px 3px 0px rgba(0,0,0,1);
+	-webkit-box-shadow: 0px 0px 3px 0px rgba(0,0,0,1);
+}
+.absolute {
+	position: absolute;
+}
+.scroll {
+	white-space: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+.ad-spacing {
+	width: 350px;
+	display: inline-table;
+	margin: 0 0px -5px 24px;
+}
+.actv1 {
+	background-color: #B54C59 !important;
+}
+.actv2 {
+	background-color: #CD6868 !important;
+}
+.actv3 {
+	background-color: #BC5CA3 !important;
+}
+.actv4 {
+	background-color: #C4B55C !important;
+}
+body {
+	background-color: #F6F6F6; 
+	overflow-x: none;
+}
+.loading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #F6F6F6;
+  z-index: 9999;
+}
+.navbar {
+	margin-bottom: 0;
+}
+.container-fluid {
+	padding: 0;
+	.secondary {
+		height: 69px;
+		background-color: #C9C9C9;
+		padding: 10px 0 10px 40px;
+		button {
+			//position: absolute;
+		}
+		.scroll {
+			@media(max-width: 767px) {
+				margin-left: -15px;
+			}
+		}
+		input {
+			width: 250px;
+			margin-top: 7px;
+		}  
+		.ng-hide-add {
+			//animation: fadeOutUp 1s;
+			display: none !important;
+		} 
+		.ng-hide-remove {		
+			animation: fadeIn .5s;
+		}
+		.ng-hide-add-active {
+			//animation: fadeInDown 1s;
+			opacity: 1;
+		}
+		-webkit-transition-delay: 40ms;
+		transition-delay: 40ms;
+		animation-delay: 40ms;
+	}
+	.navbar-header {
+		.shadow;
+		height: 75px;
+ 		width: 100%;
+		background-color: #E7E7E7;
+		.navbar-brand {
+			color: #525252;
+			h1 {
+				font-family: @Raleway;
+				font-weight: 800;
+				font-size: 20px;
+				line-height: 40px;
+				margin: 0 0 0 40px;
+				@media(max-width: 1019px) {
+					margin-left: 10px;
+				}
+			}
+		}
+		.navbar-right {
+			margin: 0;
+		}
+		.navbar-form {
+			padding-top: 3px;
+			.form-group {
+				font-family: @Raleway;
+				font-weight: 400;
+				button:first-child {
+					background-color: #50E3C2;
+					color: #FFFFFF;
+				}
+				button:nth-child(2) {
+					background-color: #966ACD;
+					color: #FFFFFF;
+				}
+				button:nth-child(3) {
+					background-color: #DF5C6C;
+					color: #FFFFFF;
+				}
+				button:nth-child(4) {
+					background-color: #DD7373;
+					color: #FFFFFF;
+				}
+				button:nth-child(5) {
+					background-color: #E36FC4;
+					color: #FFFFFF;
+				}
+				button:nth-child(6) {
+					background-color: #E3D26F;
+					color: #FFFFFF;
+				}
+			}
+		}
+		.navbar-nav {
+			button {
+				margin: 19px 40px 0 0;
+				@media(max-width: 1019px) {
+					margin-right: 10px;
+				}
+			}
+			.error-btn {
+				margin-right: 10px; 
+			}
+		}
+	}
+}
+.mobile-nav {
+	@media(min-width: 1100px) {
+		display: none;
+	}
+	white-space: nowrap;
+	overflow-y: hidden;
+	overflow-x: scroll;
+	-webkit-overflow-scrolling: touch;
+}
+/*
+	.btn.ng-show-add {
+		transition: all 0.5s linear;
+		opacity: 0;
+	}
+	.btn.ng-show-add.ng-show-add-active {
+	 	opacity: 1;
+	}
+	.btn.ng-show-remove {
+		animation: 0.5s animation;
+	}
+	.secondary.ng-show-add {
+		transition: all 0.5s linear;
+	 	opacity: 0;
+	}
+	.secondary.ng-show-add.ng-show-add-active {
+	 	opacity: 1;
+	}
+	.secondary.ng-show-remove {
+		animation: 0.5s leaveAnimation;
+	}*/ 
+
+header {
+	width: 350px;
+	margin-left: 15px;
+	h1 {
+		font-family: @Raleway;
+		font-weight: 700;
+	}
+	p {
+		font-family: @Open-Sans;
+		font-weight: 300;
+		width: 300px;
+	}
+}
+main {
+	width: 100%;
+  	text-align: center;
+	section {
+		display: inline-block;
+	}
+	.introduction {
+		width: 350px;  
+		//position: absolute;
+		display: inline-table;
+		margin: 0 10px 10px 10px;
+		text-align: left;
+		transform: translate(0, 16px);
+		h1 {
+			font-family: @Raleway;
+			font-weight: 600;
+			font-size: 35px;
+			color: black;
+		}
+		p {
+			font-family: @Open-Sans;
+			font-weight: 300;
+			width: 290px;
+		}
+		.mainad {
+			background-color: black;
+			width: 350px;
+			height: 200px;
+			.shadow;
+			margin-top: 36px;
+			@media(max-width:744px) {
+				margin-bottom: 26px;
+			}
+			h1 {
+				font-weight: 900;
+				font-size: 50px;
+				color: white;
+				margin: 0 0 0 20px;
+				padding-top: 8px;
+			}
+			p {
+				margin: 8px 0 0 20px;
+				color: white;
+				font-size: 15px;
+			}
+			h4 {
+				float: right;
+				color: white;
+				font-weight: 300;
+				margin: 15px 20px 0 0;
+			}
+			h6 {
+				font-family: @Open-Sans;
+				font-weight: 300;
+				font-size: 10px;
+				margin-top: 40px;
+			}
+			.left {
+				float: left;
+				margin-left: 20px;
+				color: white;
+			}
+			.right {
+				float: right;
+				margin-right: 20px;
+				color: white;
+			}
+		}
+	}
+	.repeated {
+		display: inline-block;
+		z-index: 9999;
+	}
+	.repeated.ng-enter {
+		animation: fadeIn .5s;
+		//transition-delay: 0.1s;
+	}
+	.repeated.ng-enter-stagger, .repeated.ng-move-stagger {
+		/* 200ms will be applied between each sucessive enter operation */ 
+		  -webkit-transition-delay: 40ms;
+		  transition-delay: 40ms;
+		  animation-delay: 40ms;
+
+		  /* this is here to avoid accidental CSS inheritance */
+		  -webkit-transition-duration:0;
+		  transition-duration:0;
+	}
+	.repeated.ng-move {
+		animation: fadeIn 1s;
+		transition-delay: 0.1s;
+	}
+	.repeated.ng-enter.ng-enter-active, .repeated.ng-move.ng-move-active {
+  		//opacity: 1;
+  		//animation: fadeOut 1s;
+	}
+	.card {
+	    .shadow;
+		width: 350px;  
+		height: 530px;
+		display: inline-table;
+		background-color: white;
+		background-size: 100%;
+		background-repeat: no-repeat;
+		margin: 0 10px 20px 10px;
+		text-align: left;
+		// float: left;
+		.move {
+			transform: translate(0, 260px);
+		}
+	}
+	.ad-style {
+		position: relative;
+		.ads {
+			position: absolute;
+			@media(max-width:744px) {
+				position: static;
+				margin-right: 10px;
+			}
+		    .shadow;
+			width: 350px;  
+			height: 530px;
+			display: inline-table;
+			background-color: black;
+			margin: 6px 10px 0 10px;
+			h1 {
+				text-align: left;
+				font-weight: 900;
+				font-size: 50px;
+				color: white;
+				margin: 0 0 0 20px;
+				padding-top: 8px;
+				font-family: @Raleway;
+			}
+			img {
+				margin-top: 50px;
+				width: 300px;
+			}
+			h2 {
+				font-family: @Open-Sans;
+				font-weight: 600;
+				color: white;
+			}
+			p {
+				color: white;
+				font-size: 15px;
+				text-align: center;
+				margin: 0 30px 0 30px;
+				font-family: @Open-Sans;
+				font-weight: 300;
+			}
+			h4 {
+				//transform: translate(150px);
+				float: right;
+				color: white;
+				font-weight: 300;
+				margin: 15px 20px 0 0;
+			}
+			h6 {
+				font-family: @Open-Sans;
+				font-weight: 300;
+				font-size: 15px;
+				margin-top: 94px;
+			}
+			.left {
+				float: left;
+				margin-left: 20px;
+				color: white;
+			}
+			.right {
+				float: right;
+				margin-right: 20px;
+				color: white;
+			}
+		}
+	}
+	.buyer {
+		font-family: @Open-Sans;
+		font-weight: 500;
+		font-size: 10px;
+		color: black;
+		margin: 0 0 0 20px;
+	}
+	.seller {
+		font-family: @Raleway;
+		font-weight: 600;
+		font-size: 35px;
+		color: black;
+		margin:0 0 0 20px;
+	}
+	.value {
+		font-family: @Open-Sans;
+		font-weight: 800;
+		color: #00FF64;
+		margin: 0 0 25px 20px;
+	}
+	.undis {
+		&:extend(.value);
+		color: #FF2100;
+	}
+	.date-vert {
+		font-family: @Open-Sans;
+		font-weight: 500;
+		color: #606060;
+		transform: rotate(90deg);
+		text-align: right;
+		position: absolute;
+		right: -35px;
+		top: 30px;
+		span {
+			color: black;
+		}
+	}
+	.desc {
+		font-family: @Open-Sans;
+		font-weight: 300;
+		font-size: 12px;
+		width: 200px;
+		margin: 0 0 20px 20px;
+	}
+	.company {
+		width: 100%;
+	}
+	.info {
+		margin: 0 0 0 20px;
+		font-size: 11px; 
+		font-family: @Open-Sans;
+		font-weight: 400;
+		color: black;
+	}
+	.flag {
+		.shadow;
+		position: absolute;
+		width: 100px;
+		right: 0;
+		margin: 78px 18px 18px 0;
+		-webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+	}
+	.field {
+		.shadow;
+		width: 50px;
+		float: right;
+		margin: 20px 20px 0 0;
+		position: relative;
+		-webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+
+	}
+}
+.show-more {
+	margin-bottom: 10px;
+}
+footer {
+	text-align: center;
+	padding: 10px 0 20px 0;
+	font-family: @Open-Sans;
+	color: gray;
+}
+@media(max-width: 1100px) {
+		.mobile-out:first-child {
+			display: none;
+		}
+		.secondary {
+			> div, input {
+				margin-left: -30px;
+			}
+		}
+		.mobile-width {
+			display: none;
+		}
+		.navbar-header {
+			margin-left: 0 !important;
+		}
+		.form-group {
+			margin-left: -5px;
+		}
+}
+@media(max-width: 767px) {
+	.form-group {
+		margin-left: 25px;
+	}
+	.secondary {
+		> div, input {
+			margin-left: -16px;
+		}
+	}
+}
+@media(max-width: 320px) {
+	.container-fluid {
+		.navbar-header {
+			width: 118% !important;
+		}
+		.secondary {
+			width: 118% !important;
+		}
+	}
+	main {
+		.introduction {
+			h1 {
+				font-size: 28px;
+				text-align: center;
+			}
+			p {
+				text-align: center;
+				font-weight: 400;
+				margin: 0 auto;
+			}
+			.mainad {
+				p, h1 {
+					text-align: left;
+				}
+			}
+		}
+	}
+}
